@@ -10,11 +10,6 @@ import torch
 
 class CmdDataset(Dataset):
     def __init__(self, x, y) -> None:
-        """
-        input:
-            path    path to data
-            hb_type type of hearbeat, A for anomaly else will be labelled as normal data N
-        """
         super().__init__()
         self.df = x.tolist()
         self.y = y.tolist()
